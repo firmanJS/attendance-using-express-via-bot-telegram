@@ -10,3 +10,32 @@ this application is an application to do attendance via telegram bot using expre
 cp .env-sample .env
 ```
 5. fill all environment variable
+6. run attendance app
+run manualy 
+```sh
+# install package
+npm install
+
+#  running app
+npm run start
+
+# running unit tetsing
+npm run test 
+```
+run with docker
+```sh
+docker-compose up --build
+```
+
+#### or run with background process
+
+```sh
+docker-compose up --build -d
+```
+#### execution npm with container docker
+```sh
+# install package
+docker-compose exec boillerplate npm install
+
+# running unit testing
+docker-compose exec boillerplate npm run test

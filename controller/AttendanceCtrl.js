@@ -9,20 +9,13 @@ const store = async (input) => {
   }
 }
 
-const update = async (req, res, next) => {
+const update = async (input) => {
   try {
-    const result = await Items.findByIdAndUpdate(req.params.id,
-      { $set: req.body }, { new: true })
-    if (!result) return next()
-    res.json({
-      'message' : 'succesfully checkout',
-      'data' : result
-    }).status(200)
+    return await Attendance.findOneAndUpdate({
+      username: input.username
+    },{ $set:input })
   } catch (error) {
-    res.json({
-      'message' : 'error checkout',
-      'data' : error
-    }).status(422)
+    return error
   }
 }
 
