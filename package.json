@@ -1,0 +1,39 @@
+{
+  "name": "attendance-using-express-via-bot-telegram",
+  "version": "1.0.0",
+  "description": "attendance app using expressjs via bot telegram",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --max-old-space-size=2048 server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/firmanJS/attendance-using-express-via-bot-telegram.git"
+  },
+  "keywords": [
+    "express",
+    "bot",
+    "telegram",
+    "bot",
+    "bot",
+    "telegram",
+    "nodejs"
+  ],
+  "author": "firmanjs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/firmanJS/attendance-using-express-via-bot-telegram/issues"
+  },
+  "homepage": "https://github.com/firmanJS/attendance-using-express-via-bot-telegram#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^3.23.3",
+    "moment": "^2.27.0",
+    "mongoose": "^5.9.25",
+    "node-telegram-bot-api": "^0.50.0",
+    "nodemon": "^2.0.4"
+  }
+}
