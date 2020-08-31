@@ -1,1 +1,12 @@
 # attendance-using-express-via-bot-telegram
+this application is an application to do attendance via telegram bot using expressjs
+
+# how to use
+1. create telegram bot search in your telegram `BotFather` and typing /newbot and enter
+2. typing your naming boot example tes_bot and enter `_bot` is required in your last name
+3. if your success your have recived message token
+4. copy environment variable with your terminal
+```sh
+cp .env-sample .env
+```
+5. fill all environment variable
