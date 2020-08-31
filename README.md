@@ -2,9 +2,9 @@
 this application is an application to do attendance via telegram bot using expressjs
 
 # how to use
-* create telegram bot search in your telegram `BotFather` and typing /newbot and enter
+* create telegram bot search in your telegram `BotFather` and typing `/newbot` and enter
 * typing your naming boot example tes_bot and enter `_bot` is required in your last name
-* if your success your have recived message token
+* if your success your have recived message token save your token
 * copy environment variable with your terminal
 ```sh
 cp .env-sample .env
@@ -33,3 +33,6 @@ docker-compose up --build -d
 ```sh
 # install package
 docker-compose exec attendance_app npm install
+```
+* after running app open your telegram and search your bot typing message like this for checkin `/checkin | user | Hadir | Work From Home | 11:00`
+or checkout `/checkout | user | 11:00`
