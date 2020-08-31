@@ -1,0 +1,45 @@
+version: '3'
+services:
+
+  mongodb_service:
+    container_name: mongodb_service
+    image: mongo:latest
+    networks:
+      attendance-network:
+    env_file:
+      - .env
+    volumes:
+      - mongodb_service:/data/db
+      - mongodb_service_config:/data/configdb
+    ports:
+      - ${MONGO_PORT}:${MONGO_PORT}
+
+  # Nodejs
+  attendance_app:
+    image: attendance_app
+    container_name: attendance_app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+      attendance-network:
+    restart: always
+    volumes:
+      - .:/app/src
+      - /app/src/node_modules
+    ports:
+      - "${APP_PORT}:${APP_PORT}"
+    depends_on:
+      - mongodb_service
+
+#Docker Networks
+networks:
+  attendance-network:
+    driver: bridge
+
+#Volumes
+volumes:
+  mongodb_service:
+    driver: local
+  mongodb_service_config:
+    driver: local
