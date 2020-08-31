@@ -18,9 +18,6 @@ npm install
 
 #  running app
 npm run start
-
-# running unit tetsing
-npm run test 
 ```
 run with docker
 ```sh
@@ -35,7 +32,4 @@ docker-compose up --build -d
 #### execution npm with container docker
 ```sh
 # install package
-docker-compose exec boillerplate npm install
-
-# running unit testing
-docker-compose exec boillerplate npm run test
+docker-compose exec attendance_app npm install
